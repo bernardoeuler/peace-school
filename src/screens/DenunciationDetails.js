@@ -4,19 +4,20 @@ import {
   Button as NBButton,
   Box,
   Heading,
+  Input,
 } from "native-base"
 
 import { SafeAreaView } from "react-native"
 
 import styles from "../styles/global"
 
-function Articles({ navigation }) {
+function DenunciationDetails({ navigation, route }) {
+  const denunciationId = route.params.id
   return (
     <SafeAreaView style={{...styles.Container, justifyContent: "space-between"}}>
-      <Text>Articles</Text>
-      <NBButton onPress={() => navigation.navigate("Article", { id: 1 })} mt={4}>Ir para página de um artigo</NBButton>
+      <Text>Detalhes de uma denúncia {denunciationId}</Text>
     </SafeAreaView>
   )
 }
 
-export default Articles
+export default DenunciationDetails
