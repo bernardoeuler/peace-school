@@ -1,5 +1,4 @@
 import React from "react"
-import { getFocusedRouteNameFromRoute } from "@react-navigation/native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import HomeRoutes from "../routes/home.routes.js"
 import ChatRoutes from "../routes/chat.routes.js"
