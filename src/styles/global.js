@@ -4,6 +4,6 @@ export default StyleSheet.create({
   Container: {
     flex: 1,
     backgroundColor: "white",
-    paddingHorizontal: 24
+    padding: 24
   }
 })
