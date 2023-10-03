@@ -32,6 +32,8 @@ function App() {
     const unsubscribe = onAuthStateChanged(auth, user => {
       setIsLoading(false)
       setUser(user)
+      console.log(auth.currentUser)
+      console.log(user)
     })
 
     return unsubscribe

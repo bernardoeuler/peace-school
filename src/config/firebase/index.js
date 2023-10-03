@@ -1,5 +1,5 @@
 import { initializeApp, getApps } from "firebase/app"
-import { getAuth } from "firebase/auth"
+import { initializeAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
 import { getStorage } from "firebase/storage"
 
@@ -19,5 +19,7 @@ if (getApps() < 1) {
 }
 
 export const firestore = getFirestore(firebaseApp)
-export const auth = getAuth(firebaseApp)
+export const auth = initializeAuth(firebaseApp, {
+  persistence: "SESSION"
+})
 export const storage = getStorage(firebaseApp)

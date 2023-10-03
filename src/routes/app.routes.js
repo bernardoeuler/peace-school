@@ -2,7 +2,7 @@ import React from "react"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import HomeRoutes from "../routes/home.routes.js"
 import ChatRoutes from "../routes/chat.routes.js"
-import NewDenunciation from "../screens/NewDenunciation.js"
+import NewDenunciationRoutes from "../routes/newDenunciation.routes.js"
 import DenunciationsListRoutes from "../routes/denunciations.routes.js"
 import Profile from "../routes/profile.routes.js"
 import hideTab from "../utils/hideTab.js"
@@ -22,7 +22,7 @@ function AppRoutes() {
         component={ChatRoutes}
         options={({ route }) => ({...hideTab(route, "Chat"), title: "Chat"})}
       />
-      <Tab.Screen name="NewDenunciationRoutes" component={NewDenunciation} options={{title: "Nova denúncia", headerShown: true, tabBarStyle: {display: "none"}}} />
+      <Tab.Screen name="NewDenunciationRoutes" component={NewDenunciationRoutes} options={{title: "Nova denúncia", tabBarStyle: {display: "none"}}} />
       <Tab.Screen name="DenunciationsListRoutes" component={DenunciationsListRoutes} options={({ route }) => ({...hideTab(route, "DenunciationDetails"), title: "Denúncias"})} />
       <Tab.Screen name="ProfileRoutes" component={Profile} options={({ route }) => ({...hideTab(route, "EditProfile"), title: "Perfil"})} />
     </Tab.Navigator>
