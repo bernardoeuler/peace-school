@@ -19,7 +19,5 @@ if (getApps() < 1) {
 }
 
 export const firestore = getFirestore(firebaseApp)
-export const auth = initializeAuth(firebaseApp, {
-  persistence: "SESSION"
-})
+export const auth = initializeAuth(firebaseApp)
 export const storage = getStorage(firebaseApp)
