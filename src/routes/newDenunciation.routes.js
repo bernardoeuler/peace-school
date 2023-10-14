@@ -3,8 +3,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import DenunciatorDetails from "../screens/DenunciatorDetails.js"
 import NewDenunciation from "../screens/NewDenunciation.js"
 import theme from "../config/theme"
+import { Feather } from '@expo/vector-icons';
 
-function NewDenunciationRoutes() {
+function NewDenunciationRoutes({ navigation }) {
   const Stack = createNativeStackNavigator()
   const { colors } = theme
 
@@ -24,6 +25,7 @@ function NewDenunciationRoutes() {
           headerStyle: { 
             backgroundColor: colors.primary[500]
           },
+          headerLeft: () => <Feather onPress={() => navigation.goBack()} style={{marginRight: 16}} name="x" size={32} color="white" />,
         }}
       />
       <Stack.Screen
