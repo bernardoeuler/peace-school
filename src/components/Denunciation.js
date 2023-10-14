@@ -30,7 +30,7 @@ function Denunciation(props) {
               return <IconButton icon={<ThreeDotsIcon />} colorScheme="neutral" w={12} h={12} rounded="full" { ...triggerProps } />
             }}
           >
-            <Menu.Item onPress={() => toggleStatus(id)}>Marcar como { status === "pending" ? "Resolvida" : "Em andamento"}</Menu.Item>
+            <Menu.Item onPress={() => toggleStatus(id)}>{status === "pending" ? "Marcar como atendida" : "Marcar como em análise"}</Menu.Item>
             <Menu.Item onPress={() => deleteDenunciation(id)}>Excluir</Menu.Item>
           </Menu>
         </HStack>
