@@ -5,7 +5,7 @@ import DenunciationDetails from "../screens/DenunciationDetails.js"
 import theme from "../config/theme"
 import { Feather } from '@expo/vector-icons';
 
-function DenunciationsRoutes() {
+function DenunciationsRoutes({ navigation }) {
   const Stack = createNativeStackNavigator()
   const { colors } = theme
 
@@ -13,14 +13,17 @@ function DenunciationsRoutes() {
     <Stack.Navigator 
       screenOptions={{
         headerTitleAlign: "left",
-        headerTintColor: colors.neutral[900]
+        headerTintColor: colors.neutral[900],
+        headerBackVisible: false,
+        headerLeft: () => <Feather onPress={() => navigation.navigate("DenunciationsList")} style={{marginRight: 16}} name="arrow-left" size={32} color={colors.neutral[900]} />
       }}
     >
       <Stack.Screen
         name="DenunciationsList"
         component={DenunciationsList}
         options={{
-          title: "Minhas denúncias"
+          title: "Minhas denúncias",
+          headerLeft: undefined
         }}
       />
       <Stack.Screen

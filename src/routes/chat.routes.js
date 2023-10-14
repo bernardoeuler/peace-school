@@ -3,8 +3,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import theme from "../config/theme"
 import ChatIntroduction from "../screens/ChatIntroduction.js"
 import Chat from "../screens/Chat.js"
+import { Feather } from '@expo/vector-icons';
 
-function ChatRoutes() {
+function ChatRoutes({ navigation }) {
   const Stack = createNativeStackNavigator()
   const { colors } = theme
 
@@ -12,7 +13,9 @@ function ChatRoutes() {
     <Stack.Navigator 
       screenOptions={{
         headerTitleAlign: "left",
-        headerTintColor: colors.neutral[900]
+        headerTintColor: colors.neutral[900],
+        headerBackVisible: false,
+        headerLeft: () => <Feather onPress={() => navigation.navigate("ChatIntroduction")} style={{marginRight: 16}} name="arrow-left" size={32} color={colors.neutral[900]} />
       }}
     >
       <Stack.Screen
@@ -20,7 +23,7 @@ function ChatRoutes() {
         component={ChatIntroduction}
         options={{
           title: "Conversar com psicólogo",
-          headerTitleAlign: "center"
+          headerLeft: undefined
         }}
       />
       <Stack.Screen

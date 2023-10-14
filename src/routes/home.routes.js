@@ -3,8 +3,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import theme from "../config/theme"
 import Articles from "../screens/Articles.js"
 import Article from "../screens/Article.js"
+import { Feather } from '@expo/vector-icons';
 
-function HomeRoutes() {
+function HomeRoutes({ navigation }) {
   const Stack = createNativeStackNavigator()
   const { colors } = theme
 
@@ -12,7 +13,9 @@ function HomeRoutes() {
     <Stack.Navigator 
       screenOptions={{
         headerTitleAlign: "left",
-        headerTintColor: colors.neutral[900]
+        headerTintColor: colors.neutral[900],
+        headerBackVisible: false,
+        headerLeft: () => <Feather onPress={() => navigation.goBack()} style={{marginRight: 16}} name="arrow-left" size={32} color={colors.neutral[900]} />
       }}
     >
       <Stack.Screen
@@ -20,7 +23,8 @@ function HomeRoutes() {
         component={Articles}
         options={{
           title: "PEACE SCHOOL",
-          headerTitleAlign: "center"
+          headerTitleAlign: "center",
+          headerLeft: undefined
         }}
       />
       <Stack.Screen
