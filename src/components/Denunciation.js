@@ -4,7 +4,7 @@ import toggleStatus from "../utils/toggleStatus"
 import deleteDenunciation from "../utils/deleteDenunciation"
 
 function Denunciation(props) {
-  const { status, garbageType, date, id, onPress, mb } = props
+  const { status, garbageType, denunciationDate, id, onPress, mb } = props
   const PressableProps = { onPress, mb }
   const statusIndicatorColorScheme = status === "pending" ? "warning" : "success"
 
@@ -20,7 +20,7 @@ function Denunciation(props) {
           </Box>
           <VStack space={1} py={5}>
             <Heading size="h6" fontWeight="semibold">{garbageType}</Heading>
-            <Text color="neutral.500" fontWeight="medium">{date}</Text>
+            <Text color="neutral.500" fontWeight="medium">{denunciationDate}</Text>
           </VStack>
         </HStack>
         <HStack alignItems="center" pr={5}>
