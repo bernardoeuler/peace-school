@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { ScrollView, StatusBar, Pressable, Heading, Image, TextArea, VStack, Button, Modal, Text, CloseIcon, Box, Icon, Center } from "native-base"
-import { useNavigation } from "@react-navigation/native"
 import styles from "../styles/global"
 import theme from "../config/theme"
 
-function DenunciatorDetails() {
+function DenunciatorDetails({ navigation }) {
   const { colors } = theme
-  const navigation = useNavigation()
 
   function handleSubmit(type) {
     console.log("Submiting details...", type)
