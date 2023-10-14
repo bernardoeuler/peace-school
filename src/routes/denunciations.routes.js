@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import DenunciationsList from "../screens/DenunciationsList.js"
 import DenunciationDetails from "../screens/DenunciationDetails.js"
 import theme from "../config/theme"
+import { Feather } from '@expo/vector-icons';
 
 function DenunciationsRoutes() {
   const Stack = createNativeStackNavigator()
@@ -19,22 +20,14 @@ function DenunciationsRoutes() {
         name="DenunciationsList"
         component={DenunciationsList}
         options={{
-          title: "Minhas denúncias",
-          headerTintColor: "white",
-          headerStyle: { 
-            backgroundColor: colors.primary[500]
-          },
+          title: "Minhas denúncias"
         }}
       />
       <Stack.Screen
         name="DenunciationDetails"
         component={DenunciationDetails}
         options={{
-          title: "Detalhes da denúncia",
-          headerTintColor: "white",
-          headerStyle: { 
-            backgroundColor: colors.primary[500]
-          },
+          title: "Detalhes da denúncia"
         }}
       />
     </Stack.Navigator> 

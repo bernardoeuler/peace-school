@@ -21,22 +21,14 @@ function NewDenunciationRoutes({ navigation }) {
         component={DenunciatorDetails}
         options={{
           title: "Nova denúncia",
-          headerTintColor: "white",
-          headerStyle: { 
-            backgroundColor: colors.primary[500]
-          },
-          headerLeft: () => <Feather onPress={() => navigation.goBack()} style={{marginRight: 16}} name="x" size={32} color="white" />,
+          headerLeft: () => <Feather onPress={() => navigation.goBack()} style={{marginRight: 16}} name="x" size={32} color={colors.neutral[900]} />,
         }}
       />
       <Stack.Screen
         name="NewDenunciation"
         component={NewDenunciation}
         options={{
-          title: "Nova denúncia",
-          headerTintColor: "white",
-          headerStyle: { 
-            backgroundColor: colors.primary[500]
-          },
+          title: "Nova denúncia"
         }}
       />
     </Stack.Navigator> 
