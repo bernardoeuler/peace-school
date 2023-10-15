@@ -22,9 +22,7 @@ function HomeRoutes({ navigation }) {
         name="Articles"
         component={Articles}
         options={{
-          title: "PEACE SCHOOL",
-          headerTitleAlign: "center",
-          headerLeft: undefined
+          headerShown: false
         }}
       />
       <Stack.Screen
