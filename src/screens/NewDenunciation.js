@@ -76,8 +76,6 @@ function NewDenunciation({ route }) {
 
   return (
     <ScrollView style={{...styles.Container}}>
-      <StatusBar barStyle="light-content" backgroundColor={colors.primary[500]} />
-
       <VStack w="100%" space={4}>
         <Text fontWeight="bold" color="neutral.700">Horário</Text>
         <Pressable onPress={() => setShowTimePicker(true)}>

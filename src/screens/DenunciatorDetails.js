@@ -14,8 +14,6 @@ function DenunciatorDetails({ navigation }) {
 
   return (
     <ScrollView style={{...styles.Container}}>
-      <StatusBar barStyle="light-content" backgroundColor={colors.primary[500]} />
-
       <Heading mt={4} px={4} size="h5" color="neutral.700" textAlign="center">Qual o seu envolvimento na situação?</Heading>
 
       <Pressable mt={8} mb={6} p={4} borderColor="neutral.100" borderWidth="1" borderRadius="24" alignItems="center" onPress={() => handleSubmit("victim")}>
