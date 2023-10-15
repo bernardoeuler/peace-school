@@ -12,7 +12,8 @@ function ChatIntroduction({ navigation }) {
   useEffect(() => {
     (async () => {
       const userDoc = await getUserData()
-      setUserName(userDoc.name)
+      const firstUserName = userDoc.name.split(" ")[0]
+      setUserName(firstUserName)
     })()
   }, [])
 
