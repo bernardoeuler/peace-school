@@ -30,7 +30,7 @@ function ChatRoutes({ navigation }) {
         name="Chat"
         component={Chat}
         options={{
-          title: "Nome do psicologo"
+          title: "Psicólogo"
         }}
       />
     </Stack.Navigator> 
