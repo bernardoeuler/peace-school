@@ -1,16 +1,17 @@
 import React from "react"
 import { Pressable, HStack, VStack, Box, Heading, Text, ThreeDotsIcon, IconButton, Menu } from "native-base"
-import toggleStatus from "../utils/toggleStatus"
 import deleteDenunciation from "../utils/deleteDenunciation"
+import theme from "../config/theme"
 
 function Denunciation(props) {
-  const { status, garbageType, denunciationDate, id, onPress, mb } = props
-  const PressableProps = { onPress, mb }
+  const { status, garbageType, denunciationDate, id, onPress } = props
+  const ButtonProps = { onPress }
   const statusIndicatorColorScheme = status === "pending" ? "warning" : "success"
+  const { colors } = theme
 
   return (
-    <Pressable w="100%" borderRadius={8} overflow="hidden" { ...PressableProps }>
-      <HStack justifyContent="space-between" bg="white" borderRadius={8} overflow="hidden">
+    <Pressable w="100%" borderRadius={8} borderWidth={2} borderColor={colors.neutral[100]} overflow="hidden" { ...ButtonProps }>
+      <HStack justifyContent="space-between" bg="white" borderRadius={8} overflow="hidden"  >
         <HStack space={5}>
           <Box
             bg={`${statusIndicatorColorScheme}.500`}
@@ -30,7 +31,7 @@ function Denunciation(props) {
               return <IconButton icon={<ThreeDotsIcon />} colorScheme="neutral" w={12} h={12} rounded="full" { ...triggerProps } />
             }}
           >
-            <Menu.Item onPress={() => toggleStatus(id)}>{status === "pending" ? "Marcar como atendida" : "Marcar como em análise"}</Menu.Item>
+            <Menu.Item onPress={() => console.log("Edit denunciation")}>Editar</Menu.Item>
             <Menu.Item onPress={() => deleteDenunciation(id)}>Excluir</Menu.Item>
           </Menu>
         </HStack>
