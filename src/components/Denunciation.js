@@ -4,7 +4,7 @@ import deleteDenunciation from "../utils/deleteDenunciation"
 import theme from "../config/theme"
 
 function Denunciation(props) {
-  const { status, garbageType, denunciationDate, id, onPress } = props
+  const { status, title, denunciationDate, id, onPress } = props
   const ButtonProps = { onPress }
   const statusIndicatorColorScheme = status === "pending" ? "warning" : "success"
   const { colors } = theme
@@ -20,7 +20,7 @@ function Denunciation(props) {
           >
           </Box>
           <VStack space={1} py={5}>
-            <Heading size="h6" fontWeight="semibold">{garbageType}</Heading>
+            <Heading size="h6" fontWeight="semibold">{title}</Heading>
             <Text color="neutral.500" fontWeight="medium">{denunciationDate}</Text>
           </VStack>
         </HStack>
