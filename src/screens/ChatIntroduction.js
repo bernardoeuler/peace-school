@@ -27,7 +27,7 @@ function ChatIntroduction({ navigation }) {
     <SafeAreaView style={{...styles.Container, justifyContent: "space-between"}}>
       <Box>
         <Heading size="h4">Olá, {userName}</Heading>
-        <Text mt={2} size="large">Que tal conversar com alguém para se sentir melhor? Fale com um de nosso psicólogos e eles vão poder te ajudar.</Text>
+        <Text mt={2} size="large">Que tal conversar com alguém para se sentir melhor? Fale com um de nossos psicólogos e eles vão poder te ajudar.</Text>
       </Box>
       <Box style={{alignItems: "center"}}>
         <NBImage source={require("../assets/images/chatting.png")} size={64} alt="image" />
