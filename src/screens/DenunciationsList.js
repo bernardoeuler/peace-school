@@ -65,7 +65,7 @@ function DenunciationsList({ navigation }) {
             <Denunciation 
               onPress={() => navigation.navigate("DenunciationDetails", { ...item })}
               status={item.status}
-              title={"Denúncia"}
+              title={item.local}
               date={item.date}
               key={item.documentId}
               id={item.documentId}
