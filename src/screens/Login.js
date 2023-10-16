@@ -94,6 +94,12 @@ function Login({ navigation }) {
         break
 
       // Firebase errors
+      case "auth/invalid-email":
+        setEmailError("Digite um email válido")
+        break
+      case "auth/invalid-login-credentials":
+        setPasswordError("O email ou a senha estão incorretos")
+        break
       case "auth/internal-error":
         setPasswordError("Erro no servidor, tente novamente em alguns minutos")
         break
