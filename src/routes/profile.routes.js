@@ -5,7 +5,7 @@ import ViewProfile from "../screens/ViewProfile.js"
 import EditProfile from "../screens/EditProfile.js"
 import { Feather } from '@expo/vector-icons';
 
-function ChatRoutes({ navigation }) {
+function ProfileRoutes({ navigation }) {
   const Stack = createNativeStackNavigator()
   const { colors } = theme
 
@@ -37,4 +37,4 @@ function ChatRoutes({ navigation }) {
   )
 }
 
-export default ChatRoutes
+export default ProfileRoutes
