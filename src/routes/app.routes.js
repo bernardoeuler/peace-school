@@ -17,7 +17,11 @@ function AppRoutes() {
     <Tab.Navigator 
       screenOptions={{
         headerShown: false,
-        tabBarShowLabel: false,
+        tabBarShowLabel: true,
+        tabBarLabelStyle: {
+          fontSize: 10,
+          fontWeight: "500"
+        },
         tabBarActiveTintColor: colors.primary[500],
         tabBarInactiveTintColor: colors.neutral[500]
       }}
@@ -28,7 +32,7 @@ function AppRoutes() {
         options={({ route }) => ({
           title: "Início",
           ...hideTab(route, "Article"),
-          tabBarIcon: ({ color }) => <AntDesign name="home" size={28} color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color} />,
         })}
       />
       <Tab.Screen
@@ -37,7 +41,7 @@ function AppRoutes() {
         options={({ route }) => ({
           title: "Chat",
           ...hideTab(route, "Chat"),
-          tabBarIcon: ({ color }) => <AntDesign name="message1" size={28} color={color} />
+          tabBarIcon: ({ color }) => <AntDesign name="message1" size={24} color={color} />
         })}
       />
       <Tab.Screen
@@ -46,7 +50,7 @@ function AppRoutes() {
         options={{
           title: "Nova denúncia",
           tabBarStyle: {display: "none"},
-          tabBarIcon: ({ color }) => <AntDesign name="pluscircleo" size={28} color={color} />
+          tabBarIcon: ({ color }) => <AntDesign name="pluscircleo" size={24} color={color} />
         }}
       />
       <Tab.Screen
@@ -55,7 +59,7 @@ function AppRoutes() {
         options={({ route }) => ({
           title: "Denúncias",
           ...hideTab(route, "DenunciationDetails"),
-          tabBarIcon: ({ color }) => <AntDesign name="bars" size={28} color={color} />
+          tabBarIcon: ({ color }) => <AntDesign name="bars" size={24} color={color} />
         })} 
       />
       <Tab.Screen
@@ -64,7 +68,7 @@ function AppRoutes() {
         options={({ route }) => ({
           title: "Perfil",
           ...hideTab(route, "EditProfile"),
-          tabBarIcon: ({ color }) => <AntDesign name="user" size={28} color={color} />
+          tabBarIcon: ({ color }) => <AntDesign name="user" size={24} color={color} />
         })}
       />
     </Tab.Navigator>
