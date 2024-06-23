@@ -35,6 +35,6 @@ Pode falar comigo por:
 
 Obrigado por ter vindo até aqui. Que tal dar uma olhada em outros projetos interessantes como este?
 
-- [CRAPPO](https://github.com/bernardoeuler/limpax) - Landing page fictícia
+- [LIMPAX](https://github.com/bernardoeuler/limpax) - Aplicativo que dá voz à população
 - [BINARY TO DECIMAL](https://github.com/bernardoeuler/binary-to-decimal-converter) - Conversor de binário para decimal
 - [TO-DO LIST APP](https://github.com/bernardoeuler/todo-app) - Aplicativo de lista de tarefas
