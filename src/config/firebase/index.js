@@ -3,13 +3,22 @@ import { initializeAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
 import { getStorage } from "firebase/storage"
 
+import { 
+  API_KEY, 
+  AUTH_DOMAIN, 
+  PROJECT_ID, 
+  STORAGE_BUCKET, 
+  MESSAGING_SENDER_ID, 
+  APP_ID 
+} from "@env"
+
 const firebaseConfig = {
-  apiKey: "AIzaSyA_92RqjhdL5P9xCBchqDVmKB64Wgsfoeg",
-  authDomain: "peace-school-sesi.firebaseapp.com",
-  projectId: "peace-school-sesi",
-  storageBucket: "peace-school-sesi.appspot.com",
-  messagingSenderId: "534667404785",
-  appId: "1:534667404785:web:f61dac98204a2a44569050"
+  apiKey: API_KEY,
+  authDomain: AUTH_DOMAIN,
+  projectId: PROJECT_ID,
+  storageBucket: STORAGE_BUCKET,
+  messagingSenderId: MESSAGING_SENDER_ID,
+  appId: APP_ID
 }
 
 let firebaseApp
